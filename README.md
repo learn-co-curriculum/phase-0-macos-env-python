@@ -1,9 +1,9 @@
 # Installing Python on macOS
 
-## Install pyenv
+## Install `pyenv`
 
-Before installing Python, we first need to install pyenv, a version manager for
-Python. We will likely only use Python version 3.8.13 in the Software
+Before installing Python, we first need to install `pyenv`, a version manager
+for Python. We will likely only use Python version 3.8.13 in the Software
 Engineering curriculum, but installing pyenv will make it simple to install
 newer versions later on.
 
@@ -13,8 +13,8 @@ Enter the following command in the Terminal:
 $ brew install pyenv
 ```
 
-Open your shell startup file (either `.zshrc` or `.bashrc`) with the following
-command:
+Open your shell startup file (either `.zshrc` or `.bash_profile`) with the
+following command:
 
 ```console
 $ code ~/.zshrc
@@ -23,7 +23,7 @@ $ code ~/.zshrc
 or
 
 ```console
-$ code ~/.bashrc
+$ code ~/.bash_profile
 ```
 
 Add the following to the end of the file:
@@ -34,18 +34,20 @@ if which pyenv > /dev/null; then
 fi
 ```
 
-We want to load pyenv every time we open a new terminal window; this will make
+We want to load `pyenv` every time we open a new terminal window; this will make
 sure that it does! Enter the following command to load your new settings:
 
 ```console
-$ source ~/.bash_profile
+$ source ~/.zshrc
 ```
 
 or
 
 ```console
-$ source ~/.zshrc
+$ source ~/.bash_profile
 ```
+
+***
 
 ## Install Python
 
@@ -79,6 +81,8 @@ $ python3 --version
 
 This command should show 3.8.13.
 
+***
+
 ## Install Pipenv
 
 Another piece of software we will use in class is Pipenv. We will learn more
@@ -89,7 +93,7 @@ $ pip install pipenv
 ```
 
 After you have installed pipenv, modify your shell startup file (either
-`~/.bash_profile` or `~/.zshrc`) to add an export line inside the `if`
+`~/.zshrc` or `~/.bash_profile`) to add an export line inside the `if`
 statement we added earlier, after the `eval` line:
 
 ```text
@@ -103,13 +107,13 @@ Save and close your shell startup file, then enter the following command once
 again to finish configuring your environment:
 
 ```console
-$ source ~/.bash_profile
+$ source ~/.zshrc
 ```
 
 or
 
 ```console
-$ source ~/.zshrc
+$ source ~/.bash_profile
 ```
 
 Congratulations! If you've completed all these steps you are ready to code in
